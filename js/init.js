@@ -6,10 +6,17 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/prod
 const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
+/* Agregado */
 const AUTOS101_URL = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+let getItemID = localStorage.getItem("userID");
+let documento = document.getElementById("userID");
+/*...*/
+
+//gettear en la esquina
+documento.innerHTML = getItemID;
 
 let showSpinner = function(){
-  document.getElementById("spinneE-cr-wrapper").style.display = "block";
+  document.getElementById("spinner-wrapper").style.display = "block";
 }
 
 let hideSpinner = function(){
