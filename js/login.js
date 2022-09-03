@@ -1,13 +1,23 @@
-function redireccionar(){
+flet userItem = document.getElementById("user-item");
+let ingresarID = document.getElementById("ingresar");
+console.log(typeof userItem)
+console.log(typeof getUserID)
 
-    let pswValid =  document.getElementById("psw").value
-    let emailValid = document.getElementById("email").value
+//Redirigir pantalla del login a la portada de inicio.
 
-    if (emailValid.length < 1){
+ingresarID.addEventListener("click", function(){
+
+    let psw =  document.getElementById("psw").value;
+    let email = document.getElementById("email").value;
+
+    if (email.length < 1){
         alert("Debe ingresar un email.");
-    } else if (pswValid.length < 1) {
+    } else if (psw.length < 1) {
         alert("Debe ingresar una contraseña.");
     } else {
-        window.location.href= "portada-inicio.html";
+        //Guardar el usuario en el almacenamiento local.
+        localStorage.setItem("userID", email);
+        window.location = "portada-inicio.html"
     }
- }
+    
+});
