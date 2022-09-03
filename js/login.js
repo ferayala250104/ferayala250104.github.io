@@ -1,4 +1,4 @@
-flet userItem = document.getElementById("user-item");
+let userItem = document.getElementById("user-item");
 let ingresarID = document.getElementById("ingresar");
 console.log(typeof userItem)
 console.log(typeof getUserID)
