@@ -5,7 +5,10 @@ let getCatID = localStorage.getItem("catID");
 const LISTADO_PRODUCTOS_URL = `${PRODUCTS_URL}${getCatID}${EXT_TYPE}`;
 
 
-
+function setProdID (idProd){
+        localStorage.setItem("prodID", idProd)
+        window.location = "product-info.html";
+}
 
 function mostrarListaProductos(listaProd){
 
