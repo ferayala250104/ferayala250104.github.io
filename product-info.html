@@ -37,11 +37,18 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
+    <div class="list" id="product-info"></div>
+       <h5>Reseñas del artículo.</h5>
+       <br>
+    <div class="list" id="comments"></div>
+       <form>
+         <h5>Comentar</h5>
+        <textarea id="tuComent" placeholder="Tu opinión" cols="50" rows="4"></textarea>
+        <br>
+        <input type="number" id="stars" min="1" max="5"> Tu puntuación.</textarea>
+        <br>
+        <button type="button" id="buttonEnviar">Enviar</button>
+       </form>
   </main>
   <footer class="text-muted">
     <div class="container">
