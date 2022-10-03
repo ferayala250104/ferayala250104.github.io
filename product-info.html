@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="portada-inicio.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -31,9 +31,16 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-            <p class="nav-link" id="userID"></p>
-          </li>
+          <div class="dropdown">
+            <li class="nav-item">
+              <a class="nav-link btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="userID"></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="my-profile.html">Mi usuario</a></li>
+                <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+                <li><a class="dropdown-item" id="close-session">Cerrar sesión</a></li>
+              </ul>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
@@ -41,9 +48,10 @@
   <main>
     <!-- *******AGREGADO*******-->
     <div class="list" id="product-info"></div>
-       <h5>Reseñas del artículo.</h5>
-       <br>
-    <div class="list" id="comments"></div>
+    <div class="d-inline-flex flex-row bg-secondary col-sm-3" id="images"></div>
+  </main>
+  <h5>Reseñas del artículo.</h5>
+    <div class="list" id="comments">
        <form>
          <h5>Comentar</h5>
         <textarea id="tuComent" placeholder="Tu opinión" cols="50" rows="4"></textarea>
@@ -52,8 +60,10 @@
         <br>
         <button type="button" id="buttonEnviar">Enviar</button>
        </form>
+    </div>
+    <h5>Productos relacionados</h5>
+       <div class="d-inline-flex flex-row bg-secondary" id="prods-relacionados"></div>   
       <!-- ******AGREGADO******-->
-  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
